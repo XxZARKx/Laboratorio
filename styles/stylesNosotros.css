@@ -1,0 +1,73 @@
+main {
+  gap: 84px;
+}
+
+main img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px;
+}
+
+.infoHotel h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.infoHotel div {
+  background-color: #bf244e;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  max-height: 100%;
+}
+
+@media (min-width: 1024px) {
+  main {
+    align-items: stretch;
+  }
+
+  main img {
+    max-width: 40%;
+    object-fit: cover;
+  }
+
+  .infoHotel {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .infoHotel h3 {
+    text-align: start;
+  }
+
+  .infoHotel:nth-child(2) div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .infoHotel:nth-child(2) div p {
+    margin: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .infoHotel:nth-child(2) div {
+    max-height: 70%;
+  }
+
+  .infoHotel:nth-child(2) {
+    justify-content: center;
+  }
+
+  main img {
+    max-width: 35%;
+  }
+
+  .infoHotel {
+    max-width: 35%;
+  }
+}

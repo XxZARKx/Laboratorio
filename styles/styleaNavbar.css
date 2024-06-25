@@ -1,0 +1,144 @@
+header {
+  width: 100%;
+  background-color: #e8dab2;
+  display: flex;
+  justify-content: center;
+}
+
+header nav {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+.menuHamburguesa {
+  background-image: url("/images/menu_hamburguesa.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.enlaces {
+  width: 100%;
+  list-style-type: none;
+  gap: 70px;
+  font-size: 36px;
+  justify-content: space-between;
+  text-transform: capitalize;
+  display: none;
+}
+
+.enlaces li a {
+  color: #1d4e89;
+}
+
+.menuDesplegable {
+  width: 100%;
+  height: 45vh;
+  position: fixed;
+  background-color: antiquewhite;
+  padding: 40px 0 0 0;
+  transform: translateY(-100%);
+  transition: all ease-in-out 0.5s;
+}
+
+.menuDesplegable .enlaces {
+  height: 100%;
+  display: flex;
+  font-size: 16px;
+  flex-direction: column;
+  gap: 10%;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuDesplegable .cerrar {
+  background-image: url("/images/cerrar.svg");
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.fondo {
+  background-color: #b9ae8a;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.5s;
+  display: none;
+}
+
+#menu {
+  display: none;
+}
+
+#menu:checked ~ .menuDesplegable {
+  display: block;
+  transform: translateY(0%);
+}
+
+#menu:checked ~ .fondo {
+  display: block;
+  opacity: 0.6;
+}
+
+@media (min-width: 1024px) {
+  header nav {
+    max-width: 72%;
+  }
+
+  .logo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .menuHamburguesa {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menuDesplegable .enlaces {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menuHamburguesa {
+    display: none;
+  }
+
+  header nav {
+    max-width: 90%;
+    width: 100%;
+    gap: 15%;
+  }
+
+  .enlaces {
+    display: flex;
+  }
+
+  #menu:checked ~ .menuDesplegable {
+    display: none;
+  }
+
+  #menu:checked ~ .fondo {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+body {
+  background-color: #ccba88;
+}
+
+.card {
+  background-color: #e4d6a3;
+}
+
+.card-header,
+.footerText {
+  font-weight: bold;
+}
+
+.carousel-inner img {
+  height: 300px;
+}
+
+.card-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .carousel-inner img {
+    height: 400px;
+  }
+}
